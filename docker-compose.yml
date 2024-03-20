@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  freeswitch:
+    build:
+      context: .
+      args:
+        TOKEN: "<YOUR_TOKEN>"
+    volumes:
+      - ./configuration:/etc/freeswitch
+      - ./tmp:/tmp
+    ports:
+      - "5060:5060/udp"
+      - "5060:5060/tcp"
+      - "5080:5080/tcp"
+      - "8021:8021/tcp"
+      - "7443:7443/tcp"
+#      - "16384-32768:16384-32768/udp"
+#    network_mode: host

@@ -2,14 +2,18 @@
 
 ## Run Dockerfile Locally
 
-1. Build the image locally. (M1 is not supported now: check the issue [here](https://github.com/signalwire/freeswitch/issues/1692))
+1. Replace <YOUR_TOKEN> with signalwire real token.
+2. Build the image and run locally. (M1 is not supported now: check the issue [here](https://github.com/signalwire/freeswitch/issues/1692))
+
    ```bash
-   make build
+   docker-compose up
    ```
-2. Run the image locally.
-   ```bash
-    make run
-   ```
+
+3. Make sure the service is running in localhost port.
+
+    ```bash
+    sudo lsof -i :5060
+    ```
 
 ## Reference
 

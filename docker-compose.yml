@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        TOKEN: "pat_yC9hf9cTipf8XTiGnNRrXn9V"
+        TOKEN: "<YOUR_TOKEN>"
     volumes:
       - ./configuration:/etc/freeswitch
       - ./tmp:/tmp
